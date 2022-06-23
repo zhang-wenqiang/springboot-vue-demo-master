@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.OrderMapper">
+
+    <select id="getPageOrder3" resultType="com.example.demo.pojo.OrderPojo">
+        SELECT o.id,
+               u.`name`,
+               g.goods_name,
+               o.address,
+               o.create_time,
+               o.update_time,
+               o.paymoney,
+               o.ispay
+        FROM `order` o
+                 JOIN `user` u
+                      on o.userid = u.id
+                 JOIN goods g
+                      on o.goodsid = g.id
+
+        where u.`name` LIKE "%"#{name}"%" LIMIT #{currentrow}, #{pagesize}
+    </select>
+
+    <select id="getOrderByUserName" resultType="com.example.demo.pojo.OrderPojo">
+        SELECT o.id,
+               u.`name`,
+               g.goods_name,
+               o.address,
+               o.create_time,
+               o.update_time,
+               o.paymoney,
+               o.ispay
+        FROM `order` o
+                 JOIN `user` u
+                      on o.userid = u.id
+                 JOIN goods g
+                      on o.goodsid = g.id
+
+        where u.`name` LIKE "%"#{name}"%"
+    </select>
+
+</mapper>
