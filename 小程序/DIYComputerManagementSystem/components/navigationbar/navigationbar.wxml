@@ -1,0 +1,10 @@
+<!--components/navigationbar/navigationbar.wxml-->
+<view class='nav-wrap' style="height: {{navigationBarHeight+5}}px;">
+  <!--title-->
+  <view class='nav-title' style="margin-top: {{navigationBarHeight-32}}px;">{{navbarData}}</view>
+  <!--搜索框-->
+  <view bindtap="search" class='search' style="margin-top: {{navigationBarHeight-33}}px;">
+    <image src='../../images/search.png'></image>
+    <input placeholder="请搜索.." disabled confirm-type='search' ></input>
+  </view>
+</view>

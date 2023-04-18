@@ -1,0 +1,31 @@
+/* pages/mycart/mycart.wxss */
+
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+
+.van-submit-bar{
+  position:static !important;
+}
+.mycart_bottom_text{
+  margin: 10px;
+  font-size: 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 100;
+  color: darkgoldenrod;
+}
+.van-submit-bar__button button{
+  background: #d7e239 ;
+  border-color: #d7e239;
+}

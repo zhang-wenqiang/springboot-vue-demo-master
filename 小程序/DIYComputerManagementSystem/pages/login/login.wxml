@@ -1,0 +1,17 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+
+<!-- 手机号输入框 -->
+  <view style="margin-top: 70rpx;">
+    <van-field model:value="{{account}}" clearable label="账号"  placeholder="请输入账号" />
+    <van-field type="password" model:value="{{password}}" clearable label="密码"  placeholder="请输入密码" />
+  </view>
+
+  <view class="login-btn">
+  <!-- 登录提示 -->
+    <van-notify id="van-notify" />
+
+    <button type="primary" bindtap="loginCheck">登录</button>
+    <button bindtap="toRegister" >点我注册</button>
+  </view>
+</view>

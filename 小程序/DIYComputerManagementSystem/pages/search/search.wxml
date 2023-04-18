@@ -1,0 +1,28 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索页面搜索栏  vantweapp -->
+<van-notify id="van-notify" />
+<view>
+  <van-search value="{{searchvalue}}" focus placeholder="请输入搜索关键词" use-action-slot bind:change="onChange" bind:search="onSearch">
+    <view slot="action" bind:tap="onClick">搜索</view>
+  </van-search>
+
+  <!-- 热门推荐标签 -->
+  <view wx:if="{{!okSearch}}">
+    <view style="font-weight: 600;margin: 5px;">热门推荐</view>
+    <view class="recommend-list">
+      <view wx:for="{{recommends}}" bindtap="select_recommend" data-id="{{index}}" data-type="{{index}}">
+        <van-tag round size="medium"><text name="item">{{item}}</text></van-tag>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="nav-list">
+    <view wx:for="{{searchGoods}}" style="background-color: rgb(228, 221, 212);" wx:for-item="item" wx:key="item.id" bindtap="selectGoods" data-goodsid="{{item.id}}">
+      <image src="{{item.img}}"></image>
+      <view>
+        <view class="part-name">{{item.goodsName}}</view>
+        <text class="part-price">￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>

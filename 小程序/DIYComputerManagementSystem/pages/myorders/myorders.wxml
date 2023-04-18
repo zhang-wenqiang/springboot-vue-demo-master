@@ -1,0 +1,11 @@
+<!--pages/myorders/myorders.wxml-->
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+<view wx:for="{{myOrderList}}" wx:key="item.id">
+  <van-swipe-cell id="swipe-cell2" right-width="{{ 65 }}">
+    <van-cell-group>
+      <van-card num="1" price="实付款:{{item.paymoney}}" title="商品:{{item.goodsName}}" thumb="{{item.img}}" />
+    </van-cell-group>
+    <view style="height: 100%;" bindtap="deleteOrder" data-id="{{item.id}}" slot="right" class="van-swipe-cell__right">删除</view>
+  </van-swipe-cell>
+</view>

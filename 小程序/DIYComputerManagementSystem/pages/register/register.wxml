@@ -1,0 +1,22 @@
+<!--pages/register/register.wxml-->
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+<van-field model:value="{{ account }}" required clearable label="账号" placeholder="请输入账号" bind:click-icon="onClickIcon" />
+
+<van-field model:value="{{ password }}" type="password" label="密码" placeholder="请输入密码" required />
+<van-field model:value="{{ name }}" label="昵称" placeholder="请输入姓名" required />
+<van-radio-group direction="horizontal" value="{{ sex }}" bind:change="onChange">
+  <text style="width: 70px;margin: 14px;font-weight: 100;">性别:</text>
+
+  <van-radio style="margin: 14px;" name="男" label-disabled>男</van-radio>
+  <van-radio style="margin: 14px;" name="女" label-disabled>女</van-radio>
+</van-radio-group>
+
+<van-field model:value="{{ age }}" label="年龄" placeholder="请输入年龄" required />
+<van-field model:value="{{ address }}" label="地址" placeholder="请输入地址" required />
+
+<!-- 注册按钮 -->
+
+<view style="margin: 30rpx;">
+  <button bindtap="register">注册</button>
+</view>

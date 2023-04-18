@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-notify":"@vant/weapp/notify/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+    
+    
+  },
+  "navigationBarTitleText": "注册"
+}

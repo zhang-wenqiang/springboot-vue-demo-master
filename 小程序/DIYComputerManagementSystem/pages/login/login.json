@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "DIY系统登录",
+  "usingComponents": {
+    "van-notify": "@vant/weapp/notify/index"
+  }
+}

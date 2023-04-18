@@ -1,0 +1,56 @@
+/* components/navigationbar/navigationbar.wxss */
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+ 
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #d7e239;
+  color: #fff;
+  z-index: 9999999;
+  margin-bottom: 10px;
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  float: left;
+  width: 80px;
+  font-size: 16px;
+  padding-left: 5px;
+  color: black;
+  font-weight: 600;
+  
+}
+
+.search {
+  background: #fff;
+  border-radius: 20px;
+  height: 30px;
+  width: 45%;
+  margin: 10px 28% 10px 25%;
+  position: relative;
+  
+}
+
+.search input {
+  width: clac(100% - 130px);
+  height: 28px;
+  color: #333;
+  position: absolute;
+  left: 30px;
+  top: 1px;
+}
+
+.search image {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.back {
+  width: 30px;
+  height: 30px;
+}

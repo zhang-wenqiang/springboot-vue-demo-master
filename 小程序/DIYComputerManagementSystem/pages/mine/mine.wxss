@@ -1,0 +1,34 @@
+/* pages/mine/mine.wxss */
+.userInfo{
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+}
+.userInfo image{
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.no-login-title{
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-text{
+  font-size: 20px;
+  color: red;
+}
+.mine-service{
+  background: rgb(232, 236, 235);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-flow: wrap;
+ 
+}

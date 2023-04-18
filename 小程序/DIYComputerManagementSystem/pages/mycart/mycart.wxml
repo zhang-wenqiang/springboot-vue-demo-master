@@ -1,0 +1,28 @@
+<!--pages/mycart/mycart.wxml-->
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+
+<view class="container">
+  <!-- 这些是订单列表 -->
+  <view style="margin-bottom: 70px;">
+    <view wx:for="{{myOrderList}}" wx:key="item.id">
+      <van-swipe-cell id="swipe-cell2" right-width="{{ 65 }}" >
+        <van-cell-group>
+          <van-card num="1" price="{{item.price}}" title="{{item.goodsName}}" thumb="{{item.img}}" />
+        </van-cell-group>
+        <view style="height: 100%;" bindtap="deleteOrder" data-orderid="{{item.orderid}}" slot="right" class="van-swipe-cell__right">删除</view>
+      </van-swipe-cell>
+    </view>
+    
+    <!-- 到底了小提示 -->
+    <text wx:if="{{isLogin}}" class="mycart_bottom_text">到底了...</text>
+    <text wx:else class="mycart_bottom_text">未登录</text>
+  </view>
+
+  <!-- 提交订单栏 -->
+  <view wx:if="{{isLogin}}" style="position: fixed;width: 100%;bottom: 50px;margin-top: 15px;">
+    <van-submit-bar price="{{ totalPrice*100 }}" button-text="提交订单" 
+     bind:submit="onSubmit" />
+  </view>
+
+</view>

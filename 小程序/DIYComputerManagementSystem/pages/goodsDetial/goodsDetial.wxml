@@ -1,0 +1,22 @@
+<!--pages/goodsDetial/goodsDetial.wxml-->
+<van-notify id="van-notify" />
+<van-dialog id="van-dialog" />
+
+<view class="goods-info-view">
+  <image src="{{goodsInfo.img}}"></image>
+
+  <view class="goods-name">
+    <text>{{goodsInfo.goodsName}}</text>
+  </view>
+  <view class="goods-price">
+    <text >￥{{goodsInfo.price}}</text>
+  </view>
+</view>
+
+
+<van-goods-action>
+  <van-goods-action-icon bindtap="toMyCart" icon="cart-o" text="购物车" />
+
+  <van-goods-action-button bindtap="addCart" color="#9ca063" text="加入购物车" type="warning" />
+  <van-goods-action-button bindtap="btnBuy" color="#d7e239" text="立即购买" />
+</van-goods-action>

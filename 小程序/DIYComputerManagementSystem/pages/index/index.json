@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "index-recommend-font":"/components/titleCom/titleCom",
+    "nav-bar": "../../components/navigationbar/navigationbar"
+  },
+  "navigationStyle": "custom"
+}

@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<!-- 搜索框 -->
+
+<nav-bar navigationBarHeight="{{navigationBarHeight}}" navbarData="DIY电脑"></nav-bar>
+<view class="container" style="margin-top: {{navigationBarHeight+10}}px;">
+  <navigator></navigator>
+  <!-- 轮播图 -->
+  <view>
+    <swiper class="main_swiper" indicator-dots autoplay interval="{{interval}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item class="main_swiperitem">
+          <image class="main_swiper_image" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 一些推荐 -->
+  <index-recommend-font></index-recommend-font>
+  <view class="nav-list">
+    <view wx:for="{{goods10}}" style="background-color: rgb(228, 221, 212);" wx:for-item="item" wx:key="item.id" bindtap="selectGoods" data-goodsid="{{item.id}}">
+      <image src="{{item.img}}"></image>
+      <view>
+        <view class="part-name">{{item.goodsName}}</view>
+        <text class="part-price">￥{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部提示 -->
+  <text class="index-bottom-text">拉到底了。。。。</text>
+  
+</view>

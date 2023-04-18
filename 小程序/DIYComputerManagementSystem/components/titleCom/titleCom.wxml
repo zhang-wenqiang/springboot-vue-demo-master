@@ -1,0 +1,4 @@
+<!--components/titleCom/titleCom.wxml-->
+<view class="index-recommend">
+  <text class="index-recommend-text">{{textContent}}</text>
+</view>

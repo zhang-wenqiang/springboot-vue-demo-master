@@ -1,0 +1,37 @@
+<!--pages/mine/mine.wxml-->
+<van-notify id="van-notify" />
+<view class="mine-container">
+  <!-- 登录显示 -->
+  <view class="userInfo">
+    <!--头像 -->
+    <image src="/images/bottom_sort_selected.png"></image>
+    <view wx:if="{{!isLogin}}" class="no-login-title" >
+      <text>未登录，点我</text>
+      <text bindtap="toLoginPage" class="btn-text">登录</text>
+    </view>
+    <view wx:else class="no-login-title" >
+      <text>{{username}}</text>
+      
+    </view>
+
+    
+  </view>
+
+  <!-- “我的”页面服务 -->
+  <view class="mine-service">
+    <!-- 我的订单 -->
+    <view bindtap="toMyOrders" style="margin: 10px;">
+      <van-icon name="shopping-cart" size="{{30}}" />
+      <view style="font-size: 10px;text-align: center;">订单</view>
+    </view>
+    <!-- 退出 -->
+    <view bindtap="exit" style="margin: 10px;">
+      <van-icon name="close" size="{{30}}" />
+      <view  style="font-size: 10px;text-align: center;">退出</view>
+    </view>
+
+  </view>
+
+
+
+</view>

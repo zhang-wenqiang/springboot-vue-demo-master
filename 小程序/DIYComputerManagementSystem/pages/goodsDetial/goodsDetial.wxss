@@ -1,0 +1,18 @@
+/* pages/goodsDetial/goodsDetial.wxss */
+
+.goods-info-view image{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: rgb(228, 221, 212);
+  height: 200px;
+}
+
+.goods-name{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.goods-price{
+  margin: 10px;
+  color: red;
+}
